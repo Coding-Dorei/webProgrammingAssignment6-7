@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월화수목금토일</title>
+</head>
+<body>
+    <script>
+        let week = "월화수목금토일"
+        let day = prompt("월화수목금토일 중에서 입력하세요")
+        let idx = day != null ? week.indexOf(day) : null
+        if(idx == null){
+            alert("입력하지 않았습니다")
+        }else{
+            if(idx == -1){
+                alert("요일을 정확하게 입력하세요")
+            }else{
+                document.write("<h2>월화수목금토일</h2><hr>")
+                if(idx >= 5){
+                    document.write(`${day}는 휴일`)
+                }else{
+                    document.write(`${day}는 출근`)
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
